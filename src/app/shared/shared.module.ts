@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MomentModule } from 'ngx-moment';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -42,12 +43,14 @@ const ngMaterialModules: any[] = [
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    MomentModule,
     ...ngMaterialModules,
   ],
   exports: [
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    MomentModule,
     ...fromComponents.components,
     ...fromPipes.pipes,
     ...ngMaterialModules,

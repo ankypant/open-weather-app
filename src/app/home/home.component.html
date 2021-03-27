@@ -2,12 +2,12 @@
   fxLayout="row wrap"
   fxLayout.xs="column"
   fxLayoutAlign="center center"
-  fxLayoutGap="20px"
+  fxLayoutGap="10px"
   class="container"
 >
   <app-city-card
     *ngFor="let city of weatherData"
-    fxFlex="18%"
+    fxFlex="30%"
     fxFlex.xs="100%"
     [cityWeatherReport]="city"
   ></app-city-card>

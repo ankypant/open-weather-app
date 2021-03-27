@@ -12,7 +12,7 @@ export class OpenWeatherService {
 
   public getWeather(cityIds: number[]): Observable<OWAAPIData> {
     return this.httpClient.get<OWAAPIData>(
-      `${environment.openWeatherAPI_URL_get_by_cityname}?id=${cityIds}&appid=${environment.openWeatherAPIKey}`
+      `${environment.openWeatherAPI_URL_get_by_cityname}?id=${cityIds}&appid=${environment.openWeatherAPIKey}&units=metric`
     );
   }
 }

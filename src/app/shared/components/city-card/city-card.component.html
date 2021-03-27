@@ -1,19 +1,69 @@
 <mat-card class="city-card">
-  <h2>{{ cityWeatherReport.name }}</h2>
-  <div class="city-card__details center-item">
-    <h3>Temp: {{ cityWeatherReport.main.temp }}</h3>
-    <h3>
-      Feels like:
-      {{ cityWeatherReport.main.feels_like | temperatureConversion: 'C' }} C
-    </h3>
-    <h3>
-      Feels like:
-      {{ cityWeatherReport.main.feels_like | temperatureConversion: 'F' }} F
-    </h3>
-    <h3>Wind speed: {{ cityWeatherReport.wind.speed }}</h3>
-    <h3>Wind degress: {{ cityWeatherReport.wind.deg }}</h3>
+  <div class="city-card__overview" fxLayout="row">
+    <div class="wind center-item" fxFlex="50%">
+      <img src="../../../../assets/icons/windy.svg" height="20px" alt="windy" />
+      <span class="image-text">{{ cityWeatherReport.wind.speed }}</span>
+    </div>
+    <div class="humidity center-item" fxFlex="50%">
+      <img
+        src="../../../../assets/icons/humidity.svg"
+        height="20px"
+        alt="humidity"
+      />
+      <span class="image-text"
+        >{{ cityWeatherReport.main.humidity }} g.kg-1</span
+      >
+    </div>
+    <div class="sunrise center-item" fxFlex="50%">
+      <img
+        src="../../../../assets/icons/sunrise.svg"
+        height="20px"
+        alt="sunrise"
+      />
+      <span class="image-text">{{
+        cityWeatherReport.sys.sunrise | date: 'hh:mm z'
+      }}</span>
+    </div>
   </div>
-  <div class="city-card__action center-item">
-    <button mat-button mat-raised-button color="warn">view more</button>
+  <div class="city-card__report">
+    <div class="temprature">
+      <div class="degree-number">
+        {{ cityWeatherReport.main.temp | temperatureConversion: 'C' }} &#8451;
+      </div>
+      <div class="feels-like-degree-number center-item">
+        Feels like:
+        {{ cityWeatherReport.main.feels_like }} &#8451;
+      </div>
+      <div class="min-max-temp center-item">
+        <mat-icon aria-hidden="false" aria-label="max-temp"
+          >arrow_upward</mat-icon
+        >
+        {{ cityWeatherReport.main.temp_max | temperatureConversion: 'C' }}
+        &#8451;
+        <mat-icon aria-hidden="false" aria-label="max-temp"
+          >arrow_downward</mat-icon
+        >
+        {{ cityWeatherReport.main.temp_min | temperatureConversion: 'C' }}
+        &#8451;
+      </div>
+    </div>
+    <div class="city-details">
+      {{ cityWeatherReport.name }}, {{ cityWeatherReport.sys.country }}
+    </div>
+    <div class="weather-description">
+      {{ cityWeatherReport.weather[0].description }}
+    </div>
+    <div class="details-icon">
+      <!-- https://openweathermap.org/weather-conditions -->
+      <img
+        src="http://openweathermap.org/img/wn/{{
+          cityWeatherReport.weather[0].icon
+        }}@4x.png"
+        alt="weather_icon"
+      />
+    </div>
+  </div>
+  <div class="city-card__action">
+    <button mat-button color="warn">view more</button>
   </div>
 </mat-card>

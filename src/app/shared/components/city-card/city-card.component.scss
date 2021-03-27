@@ -1,10 +1,46 @@
-.city-card {
-  padding: 20px;
-  margin: 20px;
-  &__details {
-    flex-direction: column;
-  }
-  &__action {
-    flex-direction: row;
+mat-card {
+  .city-card {
+    padding: 20px;
+    border: 1px solid #dfdfdf;
+    box-shadow: none;
+    // color: #fff;
+    // background: var(--primary);
+    &__overview {
+      img {
+        margin-right: 10px;
+      }
+    }
+    &__report {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .temprature {
+        margin: 60px 40px 20px 40px;
+        flex-direction: column;
+        .min-max-temp {
+          margin-top: 10px;
+        }
+        .degree-number {
+          font-weight: 400;
+          font-size: 5em;
+          color: var(--primary);
+        }
+        .feels-like-degree-number {
+          padding-top: 30px;
+          font-size: 1em;
+        }
+      }
+      .city-details {
+        font-size: 2em;
+      }
+      .details-icon {
+        flex-direction: column;
+      }
+    }
+    &__action {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }

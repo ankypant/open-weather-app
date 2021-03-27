@@ -9,8 +9,10 @@ export class TemperatureConversionPipe implements PipeTransform {
       throw new Error('Invalid details supplied to temprature pipe');
     }
 
-    const celsius = Math.round((value - 32) / 1.8);
-    const fahrenheit = Math.round(value * 32 + 1.8);
+    // const celsius = Math.round(((value - 32) * 5) / 9);
+    // Ignoring the conversion as getting metric (degree C from api)
+    const celsius = Math.round(value);
+    const fahrenheit = Math.round(value * (9 / 5) + 32);
 
     return unit === 'C' ? celsius : fahrenheit;
   }

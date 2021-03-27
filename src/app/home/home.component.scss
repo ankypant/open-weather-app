@@ -1,4 +1,9 @@
 .container {
-  padding: 20px;
+  padding: 10px;
   background-color: var(--grey);
+  // background: rgb(35, 35, 40);
+  app-city-card {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
