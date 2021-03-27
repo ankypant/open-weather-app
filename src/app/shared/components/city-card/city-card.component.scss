@@ -1,0 +1,10 @@
+.city-card {
+  padding: 20px;
+  margin: 20px;
+  &__details {
+    flex-direction: column;
+  }
+  &__action {
+    flex-direction: row;
+  }
+}

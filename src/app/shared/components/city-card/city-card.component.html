@@ -1,0 +1,19 @@
+<mat-card class="city-card">
+  <h2>{{ cityWeatherReport.name }}</h2>
+  <div class="city-card__details center-item">
+    <h3>Temp: {{ cityWeatherReport.main.temp }}</h3>
+    <h3>
+      Feels like:
+      {{ cityWeatherReport.main.feels_like | temperatureConversion: 'C' }} C
+    </h3>
+    <h3>
+      Feels like:
+      {{ cityWeatherReport.main.feels_like | temperatureConversion: 'F' }} F
+    </h3>
+    <h3>Wind speed: {{ cityWeatherReport.wind.speed }}</h3>
+    <h3>Wind degress: {{ cityWeatherReport.wind.deg }}</h3>
+  </div>
+  <div class="city-card__action center-item">
+    <button mat-button mat-raised-button color="warn">view more</button>
+  </div>
+</mat-card>

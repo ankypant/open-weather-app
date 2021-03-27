@@ -13,3 +13,9 @@ body {
   // Headers height in px minus the remaining space
   height: calc(100% - 64px);
 }
+
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

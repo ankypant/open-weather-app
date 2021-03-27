@@ -1,2 +1,5 @@
 // Import all the shared components
-export const components: any[] = [];
+
+import { CityCardComponent } from './city-card/city-card.component';
+
+export const components: any[] = [CityCardComponent];

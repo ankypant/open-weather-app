@@ -1,5 +1,14 @@
 <section
-  class="container"
-  fxLayout="column"
+  fxLayout="row wrap"
+  fxLayout.xs="column"
   fxLayoutAlign="center center"
-></section>
+  fxLayoutGap="20px"
+  class="container"
+>
+  <app-city-card
+    *ngFor="let city of weatherData"
+    fxFlex="18%"
+    fxFlex.xs="100%"
+    [cityWeatherReport]="city"
+  ></app-city-card>
+</section>

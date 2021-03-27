@@ -1,2 +1,5 @@
 // Import all the shared pipes
-export const pipes: any[] = [];
+
+import { TemperatureConversionPipe } from './temprature-conversion/temprature-conversion.pipe';
+
+export const pipes: any[] = [TemperatureConversionPipe];
