@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="form-wrapper" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card>
+      <div class="form-wrapper__angular-logo">
+        <img src="assets/icons/angular.svg" alt="angular-logo" height="120px" />
+      </div>
+      <form
+        [formGroup]="loginForm"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+      >
+        <mat-form-field>
+          <mat-label>User name</mat-label>
+          <input
+            formControlName="username"
+            matInput
+            id="username"
+            type="text"
+            autocomplete="username"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input
+            formControlName="password"
+            matInput
+            id="password"
+            type="password"
+            autocomplete="current-password"
+          />
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          id="login-button"
+          type="button"
+          (click)="login()"
+          [disabled]="loginForm.invalid"
+        >
+          Login
+        </button>
+      </form>
+    </mat-card>
+  </div>
+</div>

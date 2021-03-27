@@ -1,0 +1,14 @@
+{
+  "user-details": {
+    "id": 1,
+    "name": "Ankit Pant",
+    "email": "ankit12.pant@gmail.com",
+    "imageUrl": "https://ankitpant.com/assets/img/ankit_pant.jpg",
+    "website": "https://ankitpant.com",
+    "isAdmin": true
+  },
+  "auth": {
+    "emailId": "ankit12.pant@gmail.com",
+    "password": "dummyPassword"
+  }
+}

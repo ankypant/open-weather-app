@@ -1,0 +1,15 @@
+@import './theme/custom-material.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  // Headers height in px minus the remaining space
+  height: calc(100% - 64px);
+}

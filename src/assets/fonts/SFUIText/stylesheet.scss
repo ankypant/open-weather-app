@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'san-francisco-regular';
+  src: url(SanFrancisco-Display-Regular.otf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'san-francisco-semi-bold';
+  src: url(SanFrancisco-Display-Semibold.otf);
+  font-display: swap;
+}
+
+.san-francisco-regular {
+  font-family: 'san-francisco-regular';
+}
+
+.san-francisco-semi-bold {
+  font-family: 'san-francisco-regular';
+}
