@@ -1,10 +1,9 @@
 mat-card {
+  overflow: hidden;
   .city-card {
     padding: 20px;
-    border: 1px solid #dfdfdf;
-    box-shadow: none;
-    // color: #fff;
-    // background: var(--primary);
+    position: relative;
+    z-index: 2;
     &__overview {
       img {
         margin-right: 10px;
@@ -40,6 +39,10 @@ mat-card {
       .details-icon {
         flex-direction: column;
       }
+      .weather-description {
+        padding: 10px 0;
+        font-size: 1.2em;
+      }
     }
     &__action {
       display: flex;
@@ -47,7 +50,18 @@ mat-card {
       margin-top: 10px;
       button {
         background-color: var(--warn-button-light);
+        border: 1px solid var(--warn);
       }
     }
+  }
+  .background-image {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background: url('../../../../assets/icons/landscape.svg');
+    background-size: cover;
+    height: 45%;
+    filter: saturate(0);
   }
 }

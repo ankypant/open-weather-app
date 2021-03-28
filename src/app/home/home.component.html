@@ -1,7 +1,7 @@
 <section
   fxLayout="row wrap"
   fxLayout.xs="column"
-  fxLayoutAlign="start center"
+  fxLayoutAlign="center center"
   fxLayoutGap="10px"
   class="container"
 >
@@ -11,4 +11,7 @@
     fxFlex.xs="100%"
     [cityWeatherReport]="city"
   ></app-city-card>
+  <div class="loader center-item" *ngIf="!weatherData">
+    <mat-spinner colr="warn"></mat-spinner>
+  </div>
 </section>
