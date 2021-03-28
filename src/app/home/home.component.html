@@ -1,18 +1,19 @@
-<section
-  fxLayout="row wrap"
-  fxLayout.xs="column"
-  fxLayoutAlign="center center"
-  fxLayoutGap="10px"
-  class="container"
-  id="cityWrapper"
->
-  <app-city-card
-    *ngFor="let city of weatherData"
-    fxFlex="30%"
-    fxFlex.xs="100%"
-    [cityWeatherReport]="city"
-  ></app-city-card>
+<section class="container">
+  <div
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    fxLayoutAlign="center space-between"
+    fxLayoutGap="20px"
+    id="cityWrapper"
+  >
+    <app-city-card
+      *ngFor="let city of weatherData"
+      fxFlex="20%"
+      fxFlex.xs="100%"
+      [cityWeatherReport]="city"
+    ></app-city-card>
+  </div>
   <div class="loader center-item" *ngIf="!weatherData">
-    <mat-spinner colr="warn"></mat-spinner>
+    <mat-spinner color="warn"></mat-spinner>
   </div>
 </section>

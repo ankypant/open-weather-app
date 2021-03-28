@@ -3,14 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.config.json",
-    "server": "json-server --watch ./src/assets/mocks/data.json",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "serve": "concurrently \"json-server --watch ./src/assets/mocks/data.json\" \"ng serve --proxy-config proxy.config.json\"",
+    "start": "concurrently \"json-server --watch ./src/assets/mocks/data.json\" \"ng serve --proxy-config proxy.config.json\"",
     "cy:run": "concurrently \"json-server --watch ./src/assets/mocks/data.json\" \"ng serve --proxy-config proxy.config.json\" \"cypress open\"",
-    "cy:open": "cypress open"
+    "build": "ng build",
+    "build:prod": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {

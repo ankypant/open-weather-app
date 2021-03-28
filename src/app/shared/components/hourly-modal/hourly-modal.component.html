@@ -1,52 +1,70 @@
 <div class="hourly-modal-wrapper" [id]="'hourlyCard' + cityDetails.name">
   <div class="city-name">{{ cityDetails.name }}</div>
   <div
-    fxLayout="row wrap"
-    fxLayout.xs="column"
-    fxLayoutAlign="center center"
     *ngIf="hourlyForecastDetails$ | async as hourlyDetails; else showLoading"
     id="hourlyForecast"
   >
-    <div *ngFor="let hour of hourlyDetails.hourly" fxFlex="100%">
-      <div class="hourly center-item">
-        <div class="hourly__date-time" fxFlex="10%" fxFlex.xs="100%">
-          {{ hour.dt * 1000 | date: 'h:mm a' }}
-        </div>
-        <div class="hourly__weather-temprature" fxFlex="20%" fxFlex.xs="100%">
-          {{ hour.temp | temperatureConversion: 'C' }} <sup>&#8451;</sup>
-        </div>
-        <div
-          class="hourly__weather-real-feel-temprature"
-          fxFlex="20%"
-          fxFlex.xs="100%"
-        >
-          Reel feel
-          <span>{{ hour.feels_like | temperatureConversion: 'C' }}</span>
-          <sup>&#8451;</sup>
-        </div>
-        <div class="hourly__weather-uvi" fxFlex="10%" fxFlex.xs="100%">
-          <img
-            src="../../../../assets/icons/ultraviolet.svg"
-            height="20px"
-            alt="ultraviolet-icon"
-          />
-          <span>{{ hour.uvi }}</span>
-        </div>
-        <div class="hourly__weather-icon" fxFlex="20%" fxFlex.xs="100%">
-          <app-weather-icon
-            [iconName]="hour.weather[0].icon"
-            [iconSize]="2"
-          ></app-weather-icon>
-        </div>
-        <div class="hourly__weather-description" fxFlex="10%" fxFlex.xs="100%">
-          {{ hour.weather[0].description }}
-        </div>
+    <div
+      class="hourly center-item"
+      fxLayout="row wrap"
+      fxLayout.xs="column"
+      fxLayoutGap.xs="20px"
+      fxLayoutAlign="center center"
+      *ngFor="let hour of hourlyDetails.hourly"
+    >
+      <div class="hourly__date-time" fxFlex="10%" fxFlex.xs="100%">
+        <div class="time">{{ hour.dt * 1000 | date: 'h:mm a' }}</div>
+        <div class="date">{{ hour.dt * 1000 | date: 'd-MM-YY' }}</div>
+      </div>
+      <div
+        class="hourly__weather-temprature center-item"
+        fxFlex="20%"
+        fxFlex.xs="100%"
+      >
+        {{ hour.temp | temperatureConversion: 'C' }} <sup>&#8451;</sup>
+      </div>
+      <div
+        class="hourly__weather-real-feel-temprature center-item"
+        fxFlex="15%"
+        fxFlex.xs="100%"
+      >
+        Reel feel {{ hour.feels_like | temperatureConversion: 'C' }}
+        <sup>&#8451;</sup>
+      </div>
+      <div
+        class="hourly__weather-uvi center-item"
+        fxFlex="10%"
+        fxFlex.xs="100%"
+      >
+        <img
+          src="../../../../assets/icons/ultraviolet.svg"
+          height="20px"
+          alt="ultraviolet-icon"
+        />
+        {{ hour.uvi }}
+      </div>
+      <div
+        class="hourly__weather-icon center-item"
+        fxFlex="20%"
+        fxFlex.xs="100%"
+      >
+        <app-weather-icon
+          [iconName]="hour.weather[0].icon"
+          [iconSize]="2"
+        ></app-weather-icon>
+      </div>
+      <div
+        class="hourly__weather-description center-item"
+        fxFlex="10%"
+        fxFlex.xs="100%"
+      >
+        {{ hour.weather[0].description }}
       </div>
     </div>
   </div>
   <ng-template #showLoading>
     <div class="loader center-item">
-      <mat-spinner colr="warn"></mat-spinner>
+      <mat-spinner color="warn"></mat-spinner>
     </div>
   </ng-template>
 </div>

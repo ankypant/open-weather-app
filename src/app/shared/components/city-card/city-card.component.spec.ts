@@ -3,16 +3,22 @@ import { CityCardComponent } from './city-card.component';
 
 import { TestingModule } from '@utils/testing.module';
 import { OpenWeatherAPIResponse } from '@shared/models/open-weather-api.model';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 import { citiesDetails } from '@shared/mocks/cities-weather.mock';
 import { of } from 'rxjs';
 
 const openWeatherAPIResponse: OpenWeatherAPIResponse = citiesDetails.list[0];
 
-const MatDialogMock = {
+const matDialogMock = {
   open: (component: any, args: any): any => {
     return { afterClosed: () => of(false) };
+  },
+};
+
+const dialogRefMock = {
+  updateSize: (width: string, height: string): any => {
+    return;
   },
 };
 
@@ -26,7 +32,10 @@ describe('CityCardComponent', () => {
       TestBed.configureTestingModule({
         imports: [TestingModule],
         declarations: [CityCardComponent],
-        providers: [{ provide: MatDialog, useValue: MatDialogMock }],
+        providers: [
+          { provide: MatDialog, useValue: matDialogMock },
+          { provide: MatDialogRef, useValue: dialogRefMock },
+        ],
       }).compileComponents();
     })
   );

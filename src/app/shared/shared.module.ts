@@ -14,6 +14,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 /**
  *  SharedModule should not be providing any services,
@@ -37,6 +38,7 @@ const ngMaterialModules: any[] = [
   MatSnackBarModule,
   MatDialogModule,
   MatProgressSpinnerModule,
+  MatSlideToggleModule,
 ];
 
 @NgModule({

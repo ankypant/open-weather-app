@@ -1,10 +1,18 @@
 @import './theme/custom-material.scss';
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  background: var(--dark) url('./assets/icons/landscape.svg') no-repeat top;
+  background-size: cover;
 }
 
 .container {
+  // Headers height in px minus the remaining space
   height: calc(100% - 64px);
 }
 

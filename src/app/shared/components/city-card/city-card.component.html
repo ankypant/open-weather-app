@@ -1,4 +1,7 @@
-<mat-card *ngIf="cityWeatherReport">
+<mat-card
+  *ngIf="cityWeatherReport"
+  [ngClass]="{ 'dark-mode': (darkModeService.isDarkModeEnabled$ | async) }"
+>
   <div class="city-card">
     <app-weather-overview
       [cityWeatherReport]="cityWeatherReport"

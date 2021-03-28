@@ -1,5 +1,8 @@
 .hourly-modal-wrapper {
   height: 100%;
+  #hourlyForecast {
+    padding: 20px;
+  }
   .city-name {
     font-size: 2em;
     width: 100%;
@@ -9,8 +12,13 @@
   .hourly {
     border: 1px solid #ddd;
     margin: 6px 0;
+    width: 100%;
     &__date-time {
       font-size: 1.2em;
+      .time {
+        margin-right: 10px;
+        font-weight: 600;
+      }
     }
     &__weather-real-feel-temprature {
       color: #888;
@@ -21,6 +29,11 @@
       color: var(--primary);
       sup {
         font-size: 0.4em;
+      }
+    }
+    &__weather-uvi {
+      img {
+        margin-right: 4px;
       }
     }
   }

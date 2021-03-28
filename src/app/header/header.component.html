@@ -1,9 +1,14 @@
-<mat-toolbar color="primary">
-  <span class="header-icon">
+<mat-toolbar color="primary" fxLayout="row">
+  <span class="header-icon" fxFlex="80%" fxLayoutAlign="start center">
     <img
       src="./assets/icons/angular-logo.svg"
       height="40px"
       alt="angular-logo"
     />
   </span>
+  <div fxFlex="20%" fxLayoutAlign="end center" [formGroup]="headerForm">
+    <mat-slide-toggle color="warn" [checked]="true" formControlName="darkMode">
+      dark mode
+    </mat-slide-toggle>
+  </div>
 </mat-toolbar>
