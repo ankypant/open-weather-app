@@ -2,6 +2,48 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.x.
 
+1. Angular version **11.1.2**
+2. Node version **12.19.1**
+
+## Summary
+
+WIP
+
+## Demo
+
+Click here for the demo -> [Weather App](https://google.com)
+
+I have also implemented
+
+1. Login feature
+2. NavGaurd
+3. Interceptors
+4. Local storage service
+5. Globle Error Handling and error handling service
+6. PWA update service
+
+Most of the logic is present in **Home service**
+which is responsible for calculating and updating the
+scores in the dashboard.
+
+## Can be improved
+
+1. Add more unit testing to increase the coverage.
+2. Check reposiveness
+3. Add more automation.
+
+## App contains
+
+1. **Shared Modules** - contains is shared components, modules, pipes across the application
+
+2. **Core Module** - contains all singleton services and modules that will be used across the app but only need to be imported once.
+
+3. **Header Folder** - it's the Header component.
+
+4. **Login Folder** - Holds the authentication template.
+
+5. **Home Folder** - it's the parent weather-app component which has app-city-card
+   as the sub/child component.
 
 If you have any questions, you can mail me at `mail@ankitpant.com` or `ankit12.pant@gmail.com`.
 
@@ -22,13 +64,41 @@ coverage folder.
 
 ## Running Automation
 
-Run `yarn cy:open` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
+Run `yarn cy:run` to execute the end-to-end tests via [Cypress](https://www.cypress.io/).
 Running this command should deploy angular project, json-server and also should
 open the cypress window.
 
 ## Screenshots
 
-![preview](https://raw.githubusercontent.com/Anky001/open-weather-app/master/src/assets/screenshots/login-component.png)
+# Login Page
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/login-page.png)
+
+# Home Page
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities.png)
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities.png)
+
+# Dark mode cards
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/dark-mode-cards.png)
+
+# Hourly forecast
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/hourly-forecast.png)
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/hourly-forecast-scrolled.png)
+
+# Unit testing coverage report
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/unit-testing.png)
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/coverage.png)
+
+# e2e screenshot
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/e2e-test-cases.png)
 
 ## Built With ❤️ and
 
