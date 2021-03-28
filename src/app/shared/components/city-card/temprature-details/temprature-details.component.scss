@@ -3,6 +3,11 @@
   flex-direction: column;
   .min-max-temp {
     margin-top: 10px;
+    span {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
   }
   .degree-number {
     font-weight: 400;

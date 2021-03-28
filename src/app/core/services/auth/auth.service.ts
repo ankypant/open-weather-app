@@ -56,7 +56,6 @@ export class AuthService {
     const userDetails: UserDetails = this.storageService.get(USER_DETAILS);
 
     if (userDetails) {
-      console.log('usd', userDetails);
       this.authSubject.next(userDetails);
     }
   }

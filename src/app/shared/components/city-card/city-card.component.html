@@ -24,6 +24,7 @@
       <button
         mat-button
         color="warn"
+        [id]="'viewMoreButton' + cityWeatherReport.name"
         (click)="showHourlyForecastModal(cityWeatherReport)"
       >
         view more

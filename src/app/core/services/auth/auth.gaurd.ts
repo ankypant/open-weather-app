@@ -12,10 +12,10 @@ export class AuthGaurd implements CanActivate {
      *  if the user is not logged in then
      *  return false and navigate to the Login page
      */
-    if (!this.authService.isLoggedIn()) {
-      this.router.navigateByUrl('login');
-      return false;
-    }
+    // if (!this.authService.isLoggedIn()) {
+    //   this.router.navigateByUrl('login');
+    //   return false;
+    // }
     return true;
   }
 }
