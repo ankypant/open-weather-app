@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card *ngIf="cityWeatherReport">
   <div class="city-card">
     <app-weather-overview
       [cityWeatherReport]="cityWeatherReport"
@@ -8,10 +8,10 @@
         [cityWeatherReport]="cityWeatherReport"
       ></app-temprature-details>
       <div class="city-details">
-        {{ cityWeatherReport.name }}, {{ cityWeatherReport.sys.country }}
+        {{ cityWeatherReport?.name }}, {{ cityWeatherReport?.sys.country }}
       </div>
       <div class="weather-description">
-        {{ cityWeatherReport.weather[0].description }}
+        {{ cityWeatherReport?.weather[0].description }}
       </div>
       <div class="details-icon">
         <app-weather-icon

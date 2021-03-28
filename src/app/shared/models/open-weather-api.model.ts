@@ -10,17 +10,17 @@ export interface OWAAPIData {
 export interface OpenWeatherAPIResponse {
   coord: Coord;
   weather: Weather[];
-  base: string;
+  base?: string;
   main: Main;
-  visibility: number;
+  visibility?: number;
   wind: Wind;
   clouds: Clouds;
   dt: number;
   sys: Sys;
-  timezone: number;
-  id: number;
-  name: string;
-  cod: number;
+  timezone?: number;
+  id?: number;
+  name?: string;
+  cod?: number;
 }
 
 export interface Clouds {
@@ -42,8 +42,9 @@ export interface Main {
 }
 
 export interface Sys {
-  type: number;
-  id: number;
+  type?: number;
+  id?: number;
+  timezone?: number;
   country: string;
   sunrise: number;
   sunset: number;
@@ -59,5 +60,5 @@ export interface Weather {
 export interface Wind {
   speed: number;
   deg: number;
-  gust: number;
+  gust?: number;
 }

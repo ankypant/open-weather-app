@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     this.getWeatherDetails();
   }
 
-  private getWeatherDetails(): void {
+  public getWeatherDetails(): void {
     this.openWeatherService
       .getWeather([
         City.Amsterdam,

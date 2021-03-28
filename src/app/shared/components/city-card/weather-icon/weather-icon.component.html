@@ -1,5 +1,6 @@
 <!-- https://openweathermap.org/weather-conditions -->
 <img
+  *ngIf="iconName"
   src="http://openweathermap.org/img/wn/{{ iconName }}@{{ iconSize }}x.png"
   alt="weather_icon"
 />

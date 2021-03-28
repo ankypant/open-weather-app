@@ -5,6 +5,7 @@
     fxLayout.xs="column"
     fxLayoutAlign="center center"
     *ngIf="hourlyForecastDetails$ | async as hourlyDetails; else showLoading"
+    id="hourlyForecast"
   >
     <div *ngFor="let hour of hourlyDetails.hourly" fxFlex="100%">
       <div class="hourly center-item">

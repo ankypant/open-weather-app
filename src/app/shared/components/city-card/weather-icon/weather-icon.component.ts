@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class WeatherIconComponent {
   @Input() iconName: string;
-  @Input() iconSize: string;
+  @Input() iconSize: number;
 }

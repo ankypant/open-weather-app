@@ -12,14 +12,19 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./hourly-modal.component.scss'],
 })
 export class HourlyModalComponent implements OnInit {
-  #destroy: Subject<boolean> = new Subject();
   public hourlyForecastDetails$: Observable<HourlyForecastDetails>;
+  #destroy: Subject<boolean> = new Subject();
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public cityDetails: OpenWeatherAPIResponse,
     private openWeatherService: OpenWeatherService
   ) {}
 
   ngOnInit(): void {
+    this.getHourlyWeatherInfo();
+  }
+
+  public getHourlyWeatherInfo(): void {
     this.hourlyForecastDetails$ = this.openWeatherService
       .getHourlyWeatherInfo(this.cityDetails)
       .pipe(takeUntil(this.#destroy));
