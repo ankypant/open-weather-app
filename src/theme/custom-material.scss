@@ -9,9 +9,9 @@ $custom-warn: mat-palette($mat-red, 600);
 
 $custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
 
-// $custom-typography: mat-typography-config(
-//   $font-family: 'san-francisco-regular, sans-serif;',
-// );
-// @include mat-core($custom-typography);
+$custom-typography: mat-typography-config(
+  $font-family: 'san-francisco-regular, sans-serif;',
+);
+@include mat-core($custom-typography);
 
 @include angular-material-theme($custom-theme);
