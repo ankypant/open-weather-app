@@ -1,16 +1,23 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { OpenWeatherAPIResponse } from '@shared/models/open-weather-api.model';
-import * as moment from 'moment';
+import { HourlyModalComponent } from '../hourly-modal/hourly-modal.component';
 
 @Component({
   selector: 'app-city-card',
   templateUrl: './city-card.component.html',
   styleUrls: ['./city-card.component.scss'],
 })
-export class CityCardComponent implements OnChanges {
+export class CityCardComponent {
   @Input() cityWeatherReport: OpenWeatherAPIResponse;
 
-  ngOnChanges() {
-    console.log(this.cityWeatherReport);
+  constructor(public dialog: MatDialog) {}
+
+  public showHourlyForecastModal(cityDetails: OpenWeatherAPIResponse): void {
+    this.dialog.open(HourlyModalComponent, {
+      data: cityDetails,
+      height: '80vh',
+      width: '100vw',
+    });
   }
 }

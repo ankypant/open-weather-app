@@ -1,0 +1,30 @@
+.hourly-modal-wrapper {
+  height: 100%;
+  .city-name {
+    font-size: 2em;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 15px;
+  }
+  .hourly {
+    border: 1px solid #ddd;
+    margin: 6px 0;
+    &__date-time {
+      font-size: 1.2em;
+    }
+    &__weather-real-feel-temprature {
+      color: #888;
+    }
+    &__weather-temprature {
+      font-weight: 400;
+      font-size: 3em;
+      color: var(--primary);
+      sup {
+        font-size: 0.4em;
+      }
+    }
+  }
+  .loader {
+    height: 100%;
+  }
+}

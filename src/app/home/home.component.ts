@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenWeatherService } from '@core/services/open-weather/open-weather.service';
 import { Subject } from 'rxjs';
-import { map, pluck, takeUntil } from 'rxjs/operators';
+import { pluck, takeUntil } from 'rxjs/operators';
 import { City } from '@shared/models/owa-city-details';
 import { OpenWeatherAPIResponse } from '@shared/models/open-weather-api.model';
 

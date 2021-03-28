@@ -25,6 +25,9 @@ mat-card {
           font-weight: 400;
           font-size: 5em;
           color: var(--primary);
+          sup {
+            font-size: 0.4em;
+          }
         }
         .feels-like-degree-number {
           padding-top: 30px;
@@ -41,6 +44,10 @@ mat-card {
     &__action {
       display: flex;
       justify-content: flex-end;
+      margin-top: 10px;
+      button {
+        background-color: var(--warn-button-light);
+      }
     }
   }
 }
