@@ -1,0 +1,20 @@
+<div class="temprature">
+  <div class="degree-number">
+    {{ cityWeatherReport.main.temp | temperatureConversion: 'C' }}
+    <sup>&#8451;</sup>
+  </div>
+  <div class="feels-like-degree-number center-item">
+    Feels like:
+    {{ cityWeatherReport.main.feels_like }} &#8451;
+  </div>
+  <div class="min-max-temp center-item">
+    <mat-icon aria-hidden="false" aria-label="max-temp">arrow_upward</mat-icon>
+    {{ cityWeatherReport.main.temp_max | temperatureConversion: 'C' }}
+    &#8451;
+    <mat-icon aria-hidden="false" aria-label="max-temp"
+      >arrow_downward</mat-icon
+    >
+    {{ cityWeatherReport.main.temp_min | temperatureConversion: 'C' }}
+    &#8451;
+  </div>
+</div>

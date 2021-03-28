@@ -1,0 +1,10 @@
+.city-card {
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  &__overview {
+    img {
+      margin-right: 10px;
+    }
+  }
+}

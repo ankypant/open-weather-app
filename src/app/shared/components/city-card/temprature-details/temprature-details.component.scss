@@ -1,0 +1,19 @@
+.temprature {
+  margin: 60px 40px 20px 40px;
+  flex-direction: column;
+  .min-max-temp {
+    margin-top: 10px;
+  }
+  .degree-number {
+    font-weight: 400;
+    font-size: 5em;
+    color: var(--primary);
+    sup {
+      font-size: 0.4em;
+    }
+  }
+  .feels-like-degree-number {
+    padding-top: 30px;
+    font-size: 1em;
+  }
+}

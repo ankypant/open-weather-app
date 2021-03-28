@@ -32,12 +32,10 @@
           <span>{{ hour.uvi }}</span>
         </div>
         <div class="hourly__weather-icon" fxFlex="20%" fxFlex.xs="100%">
-          <img
-            src="http://openweathermap.org/img/wn/{{
-              hour.weather[0].icon
-            }}@2x.png"
-            alt="weather_icon"
-          />
+          <app-weather-icon
+            [iconName]="hour.weather[0].icon"
+            [iconSize]="2"
+          ></app-weather-icon>
         </div>
         <div class="hourly__weather-description" fxFlex="10%" fxFlex.xs="100%">
           {{ hour.weather[0].description }}

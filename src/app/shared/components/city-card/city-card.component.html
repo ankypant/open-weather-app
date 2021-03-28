@@ -1,58 +1,12 @@
 <mat-card>
   <div class="city-card">
-    <div class="city-card__overview" fxLayout="row">
-      <div class="wind center-item" fxFlex="50%">
-        <img
-          src="../../../../assets/icons/windy.svg"
-          height="20px"
-          alt="windy"
-        />
-        <span class="image-text"
-          >{{ cityWeatherReport.wind.speed }} meter/sec</span
-        >
-      </div>
-      <div class="humidity center-item" fxFlex="50%">
-        <img
-          src="../../../../assets/icons/humidity.svg"
-          height="20px"
-          alt="humidity"
-        />
-        <span class="image-text">{{ cityWeatherReport.main.humidity }} %</span>
-      </div>
-      <div class="sunrise center-item" fxFlex="50%">
-        <img
-          src="../../../../assets/icons/sunrise.svg"
-          height="20px"
-          alt="sunrise"
-        />
-        <span class="image-text">{{
-          cityWeatherReport.sys.sunrise * 1000 | date: 'hh:mm z'
-        }}</span>
-      </div>
-    </div>
+    <app-weather-overview
+      [cityWeatherReport]="cityWeatherReport"
+    ></app-weather-overview>
     <div class="city-card__report">
-      <div class="temprature">
-        <div class="degree-number">
-          {{ cityWeatherReport.main.temp | temperatureConversion: 'C' }}
-          <sup>&#8451;</sup>
-        </div>
-        <div class="feels-like-degree-number center-item">
-          Feels like:
-          {{ cityWeatherReport.main.feels_like }} &#8451;
-        </div>
-        <div class="min-max-temp center-item">
-          <mat-icon aria-hidden="false" aria-label="max-temp"
-            >arrow_upward</mat-icon
-          >
-          {{ cityWeatherReport.main.temp_max | temperatureConversion: 'C' }}
-          &#8451;
-          <mat-icon aria-hidden="false" aria-label="max-temp"
-            >arrow_downward</mat-icon
-          >
-          {{ cityWeatherReport.main.temp_min | temperatureConversion: 'C' }}
-          &#8451;
-        </div>
-      </div>
+      <app-temprature-details
+        [cityWeatherReport]="cityWeatherReport"
+      ></app-temprature-details>
       <div class="city-details">
         {{ cityWeatherReport.name }}, {{ cityWeatherReport.sys.country }}
       </div>
@@ -60,13 +14,10 @@
         {{ cityWeatherReport.weather[0].description }}
       </div>
       <div class="details-icon">
-        <!-- https://openweathermap.org/weather-conditions -->
-        <img
-          src="http://openweathermap.org/img/wn/{{
-            cityWeatherReport.weather[0].icon
-          }}@4x.png"
-          alt="weather_icon"
-        />
+        <app-weather-icon
+          [iconName]="cityWeatherReport.weather[0].icon"
+          [iconSize]="4"
+        ></app-weather-icon>
       </div>
     </div>
     <div class="city-card__action">
