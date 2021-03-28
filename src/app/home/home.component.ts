@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.#destroy$.unsubscribe();
   }
 
+  /**
+   * getWeatherDetails calls the openWeatherService to
+   * get the weather report of the 5 european cities
+   */
   public getWeatherDetails(): void {
     this.openWeatherService
       .getWeather([

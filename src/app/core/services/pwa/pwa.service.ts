@@ -6,6 +6,11 @@ import { SwUpdate } from '@angular/service-worker';
 export class PwaService {
   constructor(private swUpdate: SwUpdate) {}
 
+  /**
+   * init keeps a track of the PWA content
+   * changes and then reload the app to fetch
+   * the latest content of the app
+   */
   public init(): void {
     console.log('PwaService: Listening for the app changes');
     this.swUpdate.available.subscribe(event => {

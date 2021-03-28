@@ -1,7 +1,3 @@
-/**
- *  Interface auto generatedy by https://app.quicktype.io/
- * */
-
 export interface OWAAPIData {
   cnt: number;
   list: OpenWeatherAPIResponse[];

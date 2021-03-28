@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { DarkModeService } from '@core/services/darkmode/darkmode.service';
 import { OpenWeatherAPIResponse } from '@shared/models/open-weather-api.model';
 import { Subject } from 'rxjs';
@@ -27,11 +27,20 @@ export class CityCardComponent implements OnDestroy {
     this.#destroy$.unsubscribe();
   }
 
+  /**
+   * showHourlyForecastModal opens the hourly dialog
+   * and is responsible for passing the data to the
+   * dialog
+   * @param cityDetails
+   */
   public showHourlyForecastModal(cityDetails: OpenWeatherAPIResponse): void {
-    const dialogRef = this.dialog.open(HourlyModalComponent, {
-      data: cityDetails,
-      height: '60vh',
-    });
+    const dialogRef: MatDialogRef<HourlyModalComponent> = this.dialog.open(
+      HourlyModalComponent,
+      {
+        data: cityDetails,
+        height: '60vh',
+      }
+    );
     this.updateDialogDimension(dialogRef);
   }
 
@@ -40,7 +49,7 @@ export class CityCardComponent implements OnDestroy {
    * based on the screen size
    * @param dialogRef dialog modal's reference
    */
-  private updateDialogDimension(dialogRef) {
+  private updateDialogDimension(dialogRef: MatDialogRef<HourlyModalComponent>) {
     this.mediaObserver.media$
       .pipe(takeUntil(this.#destroy$))
       .subscribe((change: MediaChange) => {

@@ -11,7 +11,7 @@ WIP
 
 ## Demo
 
-Click here for the demo -> [Weather App](https://weather-app-1baad.firebaseapp.com/home)
+Click here for the demo -> [Weather App](https://weather-app-1baad.firebaseapp.com)
 
 I have also implemented
 
@@ -45,7 +45,7 @@ If you have any questions, you can mail me at `mail@ankitpant.com` or `ankit12.p
 
 ## Development server
 
-Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn start | npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 

@@ -18,6 +18,15 @@ export class HeaderComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    this.watchDarkModeChanges();
+  }
+
+  /**
+   * It keeps the track of the form change
+   * and emmits the new value to the dark mode
+   * behaviour subject
+   */
+  private watchDarkModeChanges(): void {
     this.headerForm.valueChanges.subscribe(formData => {
       if (!formData) {
         return;

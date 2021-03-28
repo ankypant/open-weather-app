@@ -24,6 +24,10 @@ export class HourlyModalComponent implements OnInit {
     this.getHourlyWeatherInfo();
   }
 
+  /**
+   * getHourlyWeatherInfo calls the openWeatherService to
+   * get the hourly weather report of the selected city
+   */
   public getHourlyWeatherInfo(): void {
     this.hourlyForecastDetails$ = this.openWeatherService
       .getHourlyWeatherInfo(this.cityDetails)
