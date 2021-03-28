@@ -50,20 +50,23 @@ export class LoginComponent implements OnInit, OnDestroy {
       username: this.loginForm.get('username').value,
       password: this.loginForm.get('password').value,
     };
-    this.authService
-      .login(authDetails)
-      .pipe(takeUntil(this.#destroy$))
-      .subscribe(
-        (userDetails: UserDetails) => {
-          this.router.navigateByUrl('home');
-        },
-        error => {
-          this.errorhandlingService.showError(
-            'Some error occured while login in',
-            error
-          );
-        }
-      );
+    // commenting out the auth service
+    // this.authService
+    //   .login(authDetails)
+    //   .pipe(takeUntil(this.#destroy$))
+    //   .subscribe(
+    //     (userDetails: UserDetails) => {
+    //       this.router.navigateByUrl('home');
+    //     },
+    //     error => {
+    //       this.errorhandlingService.showError(
+    //         'Some error occured while login in',
+    //         error
+    //       );
+    //     }
+    //   );
+
+    this.router.navigateByUrl('home');
   }
 
   /**

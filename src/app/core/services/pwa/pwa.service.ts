@@ -6,7 +6,7 @@ import { SwUpdate } from '@angular/service-worker';
 export class PwaService {
   constructor(private swUpdate: SwUpdate) {}
 
-  public init() {
+  public init(): void {
     console.log('PwaService: Listening for the app changes');
     this.swUpdate.available.subscribe(event => {
       console.log('swUpdate.event.available: ', event.available);

@@ -11,7 +11,7 @@ WIP
 
 ## Demo
 
-Click here for the demo -> [Weather App](https://google.com)
+Click here for the demo -> [Weather App](https://weather-app-1baad.firebaseapp.com/home)
 
 I have also implemented
 
@@ -19,17 +19,13 @@ I have also implemented
 2. NavGaurd
 3. Interceptors
 4. Local storage service
-5. Globle Error Handling and error handling service
+5. Error handling service
 6. PWA update service
-
-Most of the logic is present in **Home service**
-which is responsible for calculating and updating the
-scores in the dashboard.
 
 ## Can be improved
 
 1. Add more unit testing to increase the coverage.
-2. Check reposiveness
+2. Check reposiveness.
 3. Add more automation.
 
 ## App contains
@@ -38,7 +34,7 @@ scores in the dashboard.
 
 2. **Core Module** - contains all singleton services and modules that will be used across the app but only need to be imported once.
 
-3. **Header Folder** - it's the Header component.
+3. **Header Folder** - it's the shared Header component.
 
 4. **Login Folder** - Holds the authentication template.
 
@@ -114,7 +110,8 @@ open the cypress window.
 
 ## icons
 
-[Flaticons](https://www.flaticon.com/)
+- [Flaticons](https://www.flaticon.com/)
+- [Flaticons_Copyright_Authors](https://www.flaticon.com/authors/pixel-perfect")
 
 ## Author
 
