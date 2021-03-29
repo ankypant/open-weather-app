@@ -131,7 +131,7 @@ Basically inverted the color of the city cards ;)
 
 # PWA
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/pwa_installation.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/pwa_installation.jpg)
 
 # Unit testing coverage report
 
