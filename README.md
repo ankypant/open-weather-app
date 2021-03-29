@@ -40,9 +40,9 @@ Click here for the demo -> [Weather App](https://weather-app-1baad.firebaseapp.c
 I have also implemented
 
 1. Login feature
-2. NavGaurd
+2. NavGaurd - implemented for Home path
 3. Interceptors
-4. Local storage service
+4. Local storage service - for saving user's data
 5. Error handling service
 6. PWA update service
 
@@ -52,15 +52,28 @@ I have also implemented
 
 2. **Core Module** - contains all singleton services and modules that will be used across the app but only need to be imported once.
 
-3. **Header Folder** - it's the shared Header component.
+3. **Header Component** - it's the shared Header component.
 
-4. **Login Folder** - Holds the authentication template.
+4. **Login Component** - Holds the authentication template.
 
-5. **Home Folder** - it's the parent weather-app component which has app-city-card
+5. **Home Component** - it's the parent weather-app component which has app-city-card
    as the sub/child component.
+
    - `city-card` component - is reponsible for showing the city weather cards
      which is further divided into `temperature-details`, `weather-icon`, `weather-overview` components
    - `hourly-modal` component - is responsible for showing hourly weather forecast based on the selected city.
+
+6. **Open-weather service** - contains
+
+- getWeather() getWeather fetches the current weather report of the specified cities
+  @param cityIds string[]
+  @returns an Observable<OWAAPIData>
+
+- getHourlyWeatherInfo() getHourlyWeatherInfo fetches the hourly forecast for a specific city based
+  on the city's lat and long values.
+  It excludes daily,minutely,current,alerts as they are not relevent for this project.
+  @param cityDetails
+  @returns an Observable<HourlyForecastDetails>
 
 If you have any questions, you can pelase feel free to contact at `mail@ankitpant.com` or `ankit12.pant@gmail.com`.
 
@@ -106,6 +119,8 @@ open the cypress window.
 
 # Dark mode cards (show off)
 
+Basically inverted the color of the city cards ;)
+
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/dark-mode-cards.png)
 
 # Hourly forecast
@@ -113,6 +128,10 @@ open the cypress window.
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/hourly-forecast.png)
 
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/hourly-forecast-scrolled.png)
+
+# PWA
+
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/pwa_installation.png)
 
 # Unit testing coverage report
 
@@ -139,6 +158,7 @@ open the cypress window.
 - [HTML](https://www.w3.org/html/)
 - [SCSS](https://sass-lang.com/)
 - [TypeScript](http://www.typescriptlang.org/)
+- [AnimateCss](https://animate.style/)
 
 ## icons
 
