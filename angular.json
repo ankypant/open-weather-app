@@ -36,6 +36,10 @@
               {
                 "input": "src/styles.scss",
                 "inject": true
+              },
+              {
+                "input": "./node_modules/animate.css/animate.css",
+                "inject": true
               }
             ],
             "stylePreprocessorOptions": {
