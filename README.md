@@ -46,13 +46,6 @@ I have also implemented
 5. Error handling service
 6. PWA update service
 
-## Can be improved
-
-1. Add more unit testing to increase the coverage.
-2. Check reposiveness for multiple view ports.
-3. Add more automation.
-4. Error handling.
-
 ## App sturcture
 
 1. **Shared Modules** - contains is shared components, modules, pipes across the application
@@ -70,6 +63,13 @@ I have also implemented
    - `hourly-modal` component - is responsible for showing hourly weather forecast based on the selected city.
 
 If you have any questions, you can pelase feel free to contact at `mail@ankitpant.com` or `ankit12.pant@gmail.com`.
+
+## Can be improved
+
+1. Add more unit testing to increase the coverage (it's 82% now).
+2. Check reposiveness for multiple view ports.
+3. Add more automation.
+4. Error handling.
 
 ## Development server
 
@@ -123,6 +123,10 @@ open the cypress window.
 # e2e screenshot
 
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/e2e-test-cases.png)
+
+# e2e test video
+
+[e2e Video](https://www.dropbox.com/s/duvdb5uyt6nbtp2/weather-dashboard-e2e.mov?dl=0)
 
 ## Built With ❤️ and
 
