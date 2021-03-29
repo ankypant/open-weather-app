@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TemperatureConversionPipe implements PipeTransform {
   transform(value: number, unit: string): number {
     if (!value) {
-      throw new Error('Invalid details supplied to temprature pipe');
+      throw new Error('Invalid details supplied to temperature pipe');
     }
 
     // const celsius = Math.round(((value - 32) * 5) / 9);

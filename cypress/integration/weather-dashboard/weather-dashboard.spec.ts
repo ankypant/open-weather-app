@@ -35,8 +35,8 @@ describe('Login spec', () => {
       });
   });
 
-  it('should show current temprature', () => {
-    cy.get('.temprature').should('be.visible');
+  it('should show current temperature', () => {
+    cy.get('.temperature').should('be.visible');
   });
 
   it('should show modal on click of view more button', () => {

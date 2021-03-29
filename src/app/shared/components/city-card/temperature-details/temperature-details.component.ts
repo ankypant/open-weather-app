@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 import { OpenWeatherAPIResponse } from '@shared/models/open-weather-api.model';
 
 @Component({
-  selector: 'app-temprature-details',
-  templateUrl: './temprature-details.component.html',
-  styleUrls: ['./temprature-details.component.scss'],
+  selector: 'app-temperature-details',
+  templateUrl: './temperature-details.component.html',
+  styleUrls: ['./temperature-details.component.scss'],
 })
-export class TempratureDetailsComponent {
+export class TemperatureDetailsComponent {
   @Input() cityWeatherReport: OpenWeatherAPIResponse;
 }

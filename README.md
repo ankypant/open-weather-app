@@ -7,7 +7,31 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Summary
 
-WIP
+The app displays the current weather of 5 european cities (Amsterdam, Athens, Paris, Prague and Rome)
+using the [openweathermap](https://openweathermap.org/api) API.
+
+App displays
+
+- Wind speed
+- Humidity
+- Sunrise time
+- Current temperature
+- Min and Max temperature
+- City and Country name
+- Weather icon
+- Weather description
+
+On click of view more button
+the app display a modal which contains the hourly forecast of the
+selected city.
+
+- Date
+- Time
+- Temperature
+- Real feel temperature
+- UV index
+- Weather icon
+- Weather description
 
 ## Demo
 
@@ -25,8 +49,9 @@ I have also implemented
 ## Can be improved
 
 1. Add more unit testing to increase the coverage.
-2. Check reposiveness.
+2. Check reposiveness for multiple view ports.
 3. Add more automation.
+4. Error handlinge
 
 ## App contains
 
@@ -74,9 +99,9 @@ open the cypress window.
 
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities.png)
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities_daytime)
 
-# Dark mode cards
+# Dark mode cards (showoff)
 
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/dark-mode-cards.png)
 
