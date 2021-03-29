@@ -51,9 +51,9 @@ I have also implemented
 1. Add more unit testing to increase the coverage.
 2. Check reposiveness for multiple view ports.
 3. Add more automation.
-4. Error handlinge
+4. Error handling.
 
-## App contains
+## App sturcture
 
 1. **Shared Modules** - contains is shared components, modules, pipes across the application
 
@@ -65,8 +65,11 @@ I have also implemented
 
 5. **Home Folder** - it's the parent weather-app component which has app-city-card
    as the sub/child component.
+   - `city-card` component - is reponsible for showing the city weather cards
+     which is further divided into `temperature-details`, `weather-icon`, `weather-overview` components
+   - `hourly-modal` component - is responsible for showing hourly weather forecast based on the selected city.
 
-If you have any questions, you can mail me at `mail@ankitpant.com` or `ankit12.pant@gmail.com`.
+If you have any questions, you can pelase feel free to contact at `mail@ankitpant.com` or `ankit12.pant@gmail.com`.
 
 ## Development server
 
@@ -99,9 +102,9 @@ open the cypress window.
 
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities.png)
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities_daytime)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities_daytime.png)
 
-# Dark mode cards (showoff)
+# Dark mode cards (show off)
 
 ![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/dark-mode-cards.png)
 
