@@ -36,6 +36,8 @@ selected city.
 ## Demo
 
 Click here for the demo -> [Weather App](https://weather-app-1baad.firebaseapp.com)
+if you are not able to see any data, it probaly is because of CORS issue with the api
+please request CORS access via [cors-anywhere](https://cors-anywhere.herokuapp.com/corsdemo)
 
 I have also implemented
 
