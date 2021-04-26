@@ -109,39 +109,39 @@ open the cypress window.
 
 # Login Page
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/login-page.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/login-page.png)
 
 # Home Page
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/weather-5-cities.png)
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/weather-5-cities_daytime.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/weather-5-cities_daytime.png)
 
 # Dark mode cards (show off)
 
 Basically inverted the color of the city cards ;)
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/dark-mode-cards.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/dark-mode-cards.png)
 
 # Hourly forecast
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/hourly-forecast.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/hourly-forecast.png)
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/hourly-forecast-scrolled.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/hourly-forecast-scrolled.png)
 
 # PWA
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/pwa_installation.jpg)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/pwa_installation.jpg)
 
 # Unit testing coverage report
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/unit-testing.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/unit-testing.png)
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/coverage.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/coverage.png)
 
 # e2e screenshot
 
-![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/master/src/assets/screenshots/e2e-test-cases.png)
+![preview](https://raw.githubusercontent.com/ankypant/open-weather-app/main/src/assets/screenshots/e2e-test-cases.png)
 
 # e2e test video
 

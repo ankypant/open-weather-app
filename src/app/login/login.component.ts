@@ -5,7 +5,6 @@ import { AuthService } from '@core/services/auth/auth.service';
 import { ErrorhandlingService } from '@core/services/error-handling/error-handling.service';
 import { UserDetails, AuthDetails } from '@core/services/auth/auth.interface';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',

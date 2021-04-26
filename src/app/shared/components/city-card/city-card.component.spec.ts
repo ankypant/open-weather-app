@@ -11,13 +11,13 @@ import { of } from 'rxjs';
 const openWeatherAPIResponse: OpenWeatherAPIResponse = citiesDetails.list[0];
 
 const matDialogMock = {
-  open: (component: any, args: any): any => {
+  open: (__: any, ___: any): any => {
     return { afterClosed: () => of(false) };
   },
 };
 
 const dialogRefMock = {
-  updateSize: (width: string, height: string): any => {
+  updateSize: (__: string, ___: string): any => {
     return;
   },
 };

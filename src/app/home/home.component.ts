@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.#destroy$.next();
+    this.#destroy$.next(true);
     this.#destroy$.unsubscribe();
   }
 
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         City.Prague,
         City.Rome,
       ])
-      .pipe(takeUntil(this.#destroy$), pluck('list'))
+      .pipe(pluck('list'), takeUntil(this.#destroy$))
       .subscribe((weatherData: OpenWeatherAPIResponse[]) => {
         this.weatherData = weatherData;
       });

@@ -50,10 +50,11 @@ export class CityCardComponent implements OnDestroy {
    * @param dialogRef dialog modal's reference
    */
   private updateDialogDimension(dialogRef: MatDialogRef<HourlyModalComponent>) {
-    this.mediaObserver.media$
+    this.mediaObserver
+      .asObservable()
       .pipe(takeUntil(this.#destroy$))
-      .subscribe((change: MediaChange) => {
-        change.mqAlias === 'xs'
+      .subscribe((media: MediaChange[]) => {
+        media[0].mqAlias === 'xs'
           ? dialogRef.updateSize('90%', '90%')
           : dialogRef.updateSize('90vw', '80vh');
       });
